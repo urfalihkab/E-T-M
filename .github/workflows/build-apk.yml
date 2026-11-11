@@ -39,7 +39,14 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          gradle :app:assembleRelease -PversionCode=${{ github.run_number }} --stacktrace
+          set -o pipefail
+          if ! gradle :app:assembleRelease -PversionCode=${{ github.run_number }} 2>&1 | tee build.log; then
+            # Hataları herkese açık açıklama (annotation) olarak yaz; kayıtlar oturum açmadan da okunabilsin.
+            grep -E "^e: |error:|What went wrong|> .*(failed|Could not|not found)|Unresolved|ERROR" build.log | head -40 | while IFS= read -r l; do
+              echo "::error::${l//%/%25}"
+            done
+            exit 1
+          fi
           mkdir -p out
           cp app/build/outputs/apk/release/app-release.apk "out/EgitimSeblaziz-1.0.${{ github.run_number }}.apk"
 
