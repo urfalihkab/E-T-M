@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Açık kitap + oynat simgesi -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M30,38 C38,34 46,34 53,38 L53,72 C46,68 38,68 30,72 Z" />
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M55,38 C62,34 70,34 78,38 L78,72 C70,68 62,68 55,72 Z" />
+    <path android:fillColor="#E9483B"
+        android:pathData="M62,46 L72,53 L62,60 Z" />
+</vector>

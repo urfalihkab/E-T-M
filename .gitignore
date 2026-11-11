@@ -1,0 +1,12 @@
+.gradle/
+build/
+app/build/
+local.properties
+.idea/
+*.iml
+*.jks
+*.keystore
+out/
+tools/raw-playlists.json
+tools/decode-raw.js
+imza/

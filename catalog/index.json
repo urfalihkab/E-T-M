@@ -1,0 +1,116 @@
+{
+ "version": 1,
+ "updatedAt": "2026-11-11T10:18:23.619Z",
+ "provider": {
+  "id": "tonguc",
+  "name": "tonguç AKADEMİ",
+  "slogan": "tonguç anladıysa herkes anlar!",
+  "about": "Türkiye'nin alanında en iyi hocalarıyla hazırladığı konu anlatımları; öğrencilerin en hızlı öğreneceği taktikler ve gülerek, sıkılmadan öğrenmelerini sağlayacak bir tarzda anlatım.",
+  "website": "https://www.tongucakademi.com",
+  "social": "tongucakademi"
+ },
+ "levels": [
+  {
+   "id": "ilkokul",
+   "title": "İlkokul",
+   "grades": [
+    {
+     "id": "1",
+     "title": "1. Sınıf",
+     "cover": "e_aj0P21Ydg",
+     "playlists": 59
+    },
+    {
+     "id": "2",
+     "title": "2. Sınıf",
+     "cover": "40c4eirjfRY",
+     "playlists": 58
+    },
+    {
+     "id": "3",
+     "title": "3. Sınıf",
+     "cover": "Be4Xl1FElQk",
+     "playlists": 76
+    },
+    {
+     "id": "4",
+     "title": "4. Sınıf",
+     "cover": "TpWmTGUp-O8",
+     "playlists": 84
+    }
+   ]
+  },
+  {
+   "id": "ortaokul",
+   "title": "Ortaokul",
+   "grades": [
+    {
+     "id": "5",
+     "title": "5. Sınıf",
+     "cover": "pMpZuvk3QeA",
+     "playlists": 114
+    },
+    {
+     "id": "6",
+     "title": "6. Sınıf",
+     "cover": "9Un7og2Bg8A",
+     "playlists": 120
+    },
+    {
+     "id": "7",
+     "title": "7. Sınıf",
+     "cover": "wCH8701peNs",
+     "playlists": 73
+    },
+    {
+     "id": "8",
+     "title": "8. Sınıf (LGS)",
+     "cover": "jtgpEB1ZgnE",
+     "playlists": 148
+    }
+   ]
+  },
+  {
+   "id": "lise",
+   "title": "Lise",
+   "grades": [
+    {
+     "id": "9",
+     "title": "9. Sınıf",
+     "cover": "UOd4lNH8y0U",
+     "playlists": 58
+    },
+    {
+     "id": "10",
+     "title": "10. Sınıf",
+     "cover": "F0fV8TmLpFQ",
+     "playlists": 65
+    },
+    {
+     "id": "11",
+     "title": "11. Sınıf",
+     "cover": "rPdokUYkupI",
+     "playlists": 44
+    }
+   ]
+  },
+  {
+   "id": "diger",
+   "title": "Diğer",
+   "grades": [
+    {
+     "id": "kampus",
+     "title": "YKS (tonguç KAMPÜS)",
+     "cover": "3vtStXA6_9o",
+     "playlists": 97
+    },
+    {
+     "id": "akademi",
+     "title": "tonguç AKADEMİ",
+     "cover": "A0tsmqRAuFQ",
+     "playlists": 248
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+name: Ders kataloğunu güncelle
+
+# Her pazartesi 04:00 (TSİ 07:00) Tonguç kanallarını tarar; yeni liste/video varsa catalog/ güncellenir.
+# Uygulama açılışta catalog/'u buradan okuduğu için yeni APK kurmaya gerek kalmaz.
+on:
+  schedule:
+    - cron: '0 4 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Kataloğu oluştur
+        run: node tools/build-catalog.js
+      - name: Değişiklik varsa kaydet
+        run: |
+          git config user.name "katalog-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add catalog
+          if git diff --cached --quiet -- catalog ':!catalog/index.json'; then
+            echo "Yeni içerik yok."
+          else
+            git commit -m "Katalog güncellendi $(date +%F)"
+            git push
+          fi
