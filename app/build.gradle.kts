@@ -20,22 +20,14 @@ android {
         buildConfigField("String", "CATALOG_URL", "\"$catalogUrl\"")
     }
 
+    val ks = System.getenv("KEYSTORE_FILE")
+    val hasReleaseKey = ks != null && file(ks).exists()
     signingConfigs {
-        create("release") {
-            val ks = System.getenv("KEYSTORE_FILE")
-            if (ks != null && file(ks).exists()) {
-                storeFile = file(ks)
-                storePassword = System.getenv("KEYSTORE_PASSWORD")
-                keyAlias = System.getenv("KEY_ALIAS")
-                keyPassword = System.getenv("KEY_PASSWORD")
-            } else {
-                // Anahtar tanımlı değilse hata ayıklama anahtarıyla imzalanır (yine de kurulabilir).
-                val dbg = signingConfigs.getByName("debug")
-                storeFile = dbg.storeFile
-                storePassword = dbg.storePassword
-                keyAlias = dbg.keyAlias
-                keyPassword = dbg.keyPassword
-            }
+        if (hasReleaseKey) create("release") {
+            storeFile = file(ks!!)
+            storePassword = System.getenv("KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("KEY_ALIAS")
+            keyPassword = System.getenv("KEY_PASSWORD")
         }
     }
 
@@ -44,7 +36,8 @@ android {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            signingConfig = signingConfigs.getByName("release")
+            // Kalıcı anahtar tanımlı değilse Android'in hata ayıklama imzası kullanılır (yine de kurulabilir).
+            signingConfig = signingConfigs.getByName(if (hasReleaseKey) "release" else "debug")
         }
     }
 
