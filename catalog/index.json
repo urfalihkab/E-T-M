@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updatedAt": "2026-11-16T12:34:29.741Z",
+ "updatedAt": "2026-11-23T14:17:14.354Z",
  "provider": {
   "id": "tonguc",
   "name": "tonguç AKADEMİ",
@@ -23,8 +23,8 @@
     {
      "id": "2",
      "title": "2. Sınıf",
-     "cover": "40c4eirjfRY",
-     "playlists": 58
+     "cover": "PCem2dG8FBw",
+     "playlists": 59
     },
     {
      "id": "3",
@@ -48,25 +48,25 @@
      "id": "5",
      "title": "5. Sınıf",
      "cover": "pMpZuvk3QeA",
-     "playlists": 114
+     "playlists": 116
     },
     {
      "id": "6",
      "title": "6. Sınıf",
-     "cover": "L6KYN6I4kec",
-     "playlists": 119
+     "cover": "dv5DVspsNXM",
+     "playlists": 121
     },
     {
      "id": "7",
      "title": "7. Sınıf",
-     "cover": "wCH8701peNs",
-     "playlists": 133
+     "cover": "TYwoFVByHPc",
+     "playlists": 135
     },
     {
      "id": "8",
      "title": "8. Sınıf (LGS)",
-     "cover": "d12BThyN1xk",
-     "playlists": 200
+     "cover": "FIvjt_y2odY",
+     "playlists": 208
     }
    ]
   },
@@ -78,13 +78,13 @@
      "id": "9",
      "title": "9. Sınıf",
      "cover": "UOd4lNH8y0U",
-     "playlists": 152
+     "playlists": 153
     },
     {
      "id": "10",
      "title": "10. Sınıf",
      "cover": "F0fV8TmLpFQ",
-     "playlists": 143
+     "playlists": 145
     },
     {
      "id": "11",
